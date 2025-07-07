@@ -43,16 +43,37 @@ The Pollution Passport is a revolutionary concept that transforms environmental 
 ## 🏗️ System Architecture
 
 ```
-┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
-│   Frontend      │    │    Backend      │    │   External APIs │
-│   (React + TS)  │────│   (Flask)       │────│  OpenWeatherMap │
-│                 │    │                 │    │  Google Air+    │
-│ - Pollution     │    │ - ML Models     │    │  GDI Interface  │
-│   Passport UI   │    │ - Scoring Algo  │    │  IoT Sensors    │
-│ - Interactive   │    │ - Data Pipeline │    │  Satellite Data │
-│   Maps          │    │ - Reward System │    │                 │
-│ - Leaderboards  │    │ - APIs          │    │                 │
-└─────────────────┘    └─────────────────┘    └─────────────────┘
+graph TB
+    subgraph "Client Layer"
+        A[🌐 Frontend<br/>React + TypeScript<br/>📱 Pollution Passport UI<br/>🗺️ Interactive Maps<br/>🏆 Leaderboards]
+    end
+    
+    subgraph "Application Layer"
+        B[⚙️ Backend<br/>Flask API<br/>🧠 ML Models<br/>📊 Scoring Algorithm<br/>📈 Data Pipeline<br/>🎁 Reward System<br/>🔌 REST APIs]
+    end
+    
+    subgraph "Data Layer"
+        C[🌤️ OpenWeatherMap<br/>Weather Data]
+        D[🌬️ Google Air Quality<br/>Air Pollution Data]
+        E[🌍 GDI Interface<br/>Geographic Data]
+        F[📡 IoT Sensors<br/>Real-time Monitoring]
+        G[🛰️ Satellite Data<br/>Environmental Imagery]
+    end
+    
+    A -.->|HTTP Requests| B
+    B -.->|API Calls| C
+    B -.->|API Calls| D
+    B -.->|API Calls| E
+    B -.->|Data Collection| F
+    B -.->|Data Ingestion| G
+    
+    classDef frontend fill:#e1f5fe,stroke:#0288d1,stroke-width:2px
+    classDef backend fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+    classDef external fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    
+    class A frontend
+    class B backend
+    class C,D,E,F,G external
 ```
 
 ## 🌟 Core Features
