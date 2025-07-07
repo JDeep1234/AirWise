@@ -302,28 +302,6 @@ SECRET_KEY=your_secret_key
 - Policy recommendation adoption
 - Air quality awareness increase
 
-## 🤝 Contributing
-
-We welcome contributions! Please read our contributing guidelines and submit pull requests for any improvements.
-
-### Development Workflow
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests and documentation
-5. Submit a pull request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 📞 Support & Contact
-
-For technical support or questions:
-- Create an issue on GitHub
-- Email: support@airwise.app
-- Documentation: [Wiki](link-to-wiki)
-
 ---
 
 **AirWise** - Transforming air quality awareness into environmental action through innovative technology and meaningful incentives. 🌱
