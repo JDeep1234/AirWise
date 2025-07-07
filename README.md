@@ -42,6 +42,7 @@ The Pollution Passport is a revolutionary concept that transforms environmental 
 
 ## 🏗️ System Architecture
 
+```mermaid
 graph TB
     subgraph "Client Layer"
         A[🌐 Frontend<br/>React + TypeScript<br/>📱 Pollution Passport UI<br/>🗺️ Interactive Maps<br/>🏆 Leaderboards]
@@ -73,6 +74,7 @@ graph TB
     class A frontend
     class B backend
     class C,D,E,F,G external
+```
 
 ## 🌟 Core Features
 
